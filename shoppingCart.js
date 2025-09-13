@@ -2,7 +2,7 @@
 console.log('Exporting Module');
 
 const shippingCost = 10; //variables are scoped only in this module
-export const cart = []; //checking the live connection
+export const cart = []; //checking the live connection-->not just a copy. we are exporting empty cart
 
 //console.log(shippingCost);
 
