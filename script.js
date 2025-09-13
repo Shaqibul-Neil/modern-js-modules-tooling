@@ -16,8 +16,35 @@
 
 //importing all the exports at the same time
 
-import * as ShoppingCart from './shoppingCart.js'; // * means everything-->importing everything into an object. capital case like class
+//import * as ShoppingCart from './shoppingCart.js'; // * means everything-->importing everything into an object. capital case like class-->shoppingCart.js is exporting a public api just like a class
 
 console.log('Importing Module');
 //console.log(shippingCost); /variables are scoped only in the module that it was declared. kind of encapsulated
-console.log(ShoppingCart);
+//console.log(ShoppingCart);
+
+//ShoppingCart.addToCart('breed', 5);
+//console.log(ShoppingCart.totalPrice);
+
+//importing default-->when we'll import it we can give it any name we want
+// import addDefault from './shoppingCart.js';
+// addDefault('flour', 15);
+
+//we can add named export and default export at the same but in practice never do this
+// import addDefault, {
+//   addToCart,
+//   totalPrice,
+//   totalQuantity,
+// } from './shoppingCart.js';
+// addDefault('flour', 15);
+// console.log(totalPrice);
+
+//importing default-->when we'll import it we can give it any name we want
+// import addDefault from './shoppingCart.js';
+// addDefault('flour', 15);
+
+//Checking live connection
+import addDefault, { cart } from './shoppingCart.js';
+addDefault('flour', 15);
+addDefault('bread', 1);
+addDefault('rice', 5);
+console.log(cart); //cart updated according to the function Real TIME
