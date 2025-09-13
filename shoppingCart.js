@@ -12,3 +12,11 @@ export const addToCart = (product, quantity) => {
 };
 
 //export always needs to be top level code, no block or function
+/*
+if (true) { //---> it wont work here
+  export const addToCart = (product, quantity) => {
+    cart.push({ product, quantity });
+    console.log(`${product} ${quantity} added to the cart`);
+  };
+}
+*/
