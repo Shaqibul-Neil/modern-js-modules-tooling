@@ -3,7 +3,7 @@ console.log('Exporting Module');
 
 const shippingCost = 10; //variables are scoped only in this module
 const cart = [];
-console.log(shippingCost);
+//console.log(shippingCost);
 
 //creating a named export--> func defined here exported and imported in script.js and then called there
 export const addToCart = (product, quantity) => {
@@ -25,3 +25,6 @@ if (true) { //---> it wont work here
 const totalPrice = 237;
 const totalQuantity = 23;
 export { totalPrice, totalQuantity }; //curly brace must
+
+//we can change the name here also
+//export { totalPrice, totalQuantity as qT };
