@@ -20,3 +20,8 @@ if (true) { //---> it wont work here
   };
 }
 */
+//exporting multiple things using named export
+
+const totalPrice = 237;
+const totalQuantity = 23;
+export { totalPrice, totalQuantity }; //curly brace must
