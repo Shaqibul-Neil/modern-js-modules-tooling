@@ -1,6 +1,10 @@
 //Exporting Module
 console.log('Exporting Module');
 
+//Blocking Code
+// console.log('Start Fetching Users');
+// await fetch('https://jsonplaceholder.typicode.com/users');
+// console.log('Finished');
 const shippingCost = 10; //variables are scoped only in this module
 export const cart = []; //checking the live connection-->not just a copy. we are exporting empty cart
 

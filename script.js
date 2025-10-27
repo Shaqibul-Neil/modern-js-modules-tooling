@@ -48,3 +48,24 @@ addDefault('flour', 15);
 addDefault('bread', 1);
 addDefault('rice', 5);
 console.log(cart); //cart updated according to the function Real TIME
+
+// Top-Level await (ES2022)
+//await works without async only if the type is module but prb is it blocks the rest of the code
+// const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+// const data = await res.json();
+// console.log(data);
+// console.log('5');
+
+const getLastPost = async function () {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await res.json();
+  console.log(data);
+  return { title: data.at(-1).title, text: data.at(-1).body };
+};
+const lastPost = getLastPost();
+console.log(lastPost); //it returns a promise bcz as we know calling an async function alwz returns a promise
+//workaround not very clean
+lastPost.then(res => console.log(res));
+
+const lastPost2 = await getLastPost();
+console.log('lastPost2', lastPost2);
