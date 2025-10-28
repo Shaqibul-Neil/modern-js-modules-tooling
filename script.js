@@ -43,11 +43,11 @@ console.log('Importing Module');
 // addDefault('flour', 15);
 
 //Checking live connection
-import addDefault, { cart } from './shoppingCart.js';
-addDefault('flour', 15);
-addDefault('bread', 1);
-addDefault('rice', 5);
-console.log(cart); //cart updated according to the function Real TIME
+// import addDefault, { cart } from './shoppingCart.js';
+// addDefault('flour', 15);
+// addDefault('bread', 1);
+// addDefault('rice', 5);
+// console.log(cart); //cart updated according to the function Real TIME
 
 // Top-Level await (ES2022)
 //await works without async only if the type is module but prb is it blocks the rest of the code
@@ -56,16 +56,34 @@ console.log(cart); //cart updated according to the function Real TIME
 // console.log(data);
 // console.log('5');
 
-const getLastPost = async function () {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  const data = await res.json();
-  console.log(data);
-  return { title: data.at(-1).title, text: data.at(-1).body };
-};
-const lastPost = getLastPost();
-console.log(lastPost); //it returns a promise bcz as we know calling an async function alwz returns a promise
+// const getLastPost = async function () {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//   const data = await res.json();
+//   console.log(data);
+//   return { title: data.at(-1).title, text: data.at(-1).body };
+// };
+// const lastPost = getLastPost();
+// console.log(lastPost); //it returns a promise bcz as we know calling an async function alwz returns a promise
 //workaround not very clean
-lastPost.then(res => console.log(res));
+// lastPost.then(res => console.log(res));
 
-const lastPost2 = await getLastPost();
-console.log('lastPost2', lastPost2);
+// const lastPost2 = await getLastPost();
+// console.log('lastPost2', lastPost2);
+
+//previous before es6 --closures
+// const ShoppingCart = (function () {
+//   const cart = [];
+//   const shippingCost = 10;
+//   const totalPrice = 237;
+//   const totalQuantity = 23;
+
+//   const addToCart = (product, quantity) => {
+//     cart.push({ product, quantity });
+//     console.log(`${product} ${quantity} added to the cart`);
+//   };
+//   return { addToCart, cart, totalPrice, totalQuantity };
+// })();
+
+// ShoppingCart.addToCart('apple', 4);
+
+// console.log(ShoppingCart.shippingCost);
