@@ -1,6 +1,8 @@
 //Importing Module
 // import { addToCart, totalPrice, totalQuantity } from './shoppingCart.js'; //imported value is executed first. modules doesn't need use strict
 
+import cloneDeep from 'https://cdn.jsdelivr.net/npm/lodash-es@4.17.21/cloneDeep.js';
+
 //we can change the name also
 // import {
 //   addToCart,
@@ -87,3 +89,19 @@ console.log('Importing Module');
 // ShoppingCart.addToCart('apple', 4);
 
 // console.log(ShoppingCart.shippingCost);
+
+const state = {
+  cart: [
+    { product: 'pizza', quantity: 5 },
+    { product: 'bread', quantity: 15 },
+  ],
+  user: { loggedIn: true },
+};
+//to create a copy of obj we use obj.assign
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+const anotherWayClone = structuredClone(state);
+console.log(stateDeepClone);
+console.log(stateClone);
+console.log(anotherWayClone);
+state.user.loggedIn = false;

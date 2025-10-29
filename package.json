@@ -1,0 +1,23 @@
+{
+  "name": "practice-1",
+  "version": "1.0.0",
+  "main": "clean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaqibul-Neil/modern-js-modules-tooling.git"
+  },
+  "author": "Shakibul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaqibul-Neil/modern-js-modules-tooling/issues"
+  },
+  "homepage": "https://github.com/Shaqibul-Neil/modern-js-modules-tooling#readme",
+  "description": "",
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21"
+  }
+}
