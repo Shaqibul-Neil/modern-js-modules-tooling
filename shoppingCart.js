@@ -39,3 +39,4 @@ if (true) { //---> it wont work here
 //   cart.push({ product, quantity });
 //   console.log(`${quantity} ${product} added to the cart`);
 //};
+//
